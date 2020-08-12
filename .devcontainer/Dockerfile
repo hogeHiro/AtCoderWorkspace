@@ -14,3 +14,8 @@ RUN apk update && \
     expect
 
 RUN npm install -g atcoder-cli
+RUN acc config default-task-choice all && \
+    acc config default-test-dirname-format test
+
+COPY .devcontainer/template/main.py /root/.config/atcoder-cli-nodejs/python/main.py
+COPY .devcontainer/template/template.json /root/.config/atcoder-cli-nodejs/python/template.json
