@@ -15,3 +15,13 @@ Docker と VSCode (VS Code Remote Development導入済み) があればどこで
 1. テストを実施する。`oj t -c " python3 ./main.py"`
 1. コードを提出する。`acc submit main.py`
     * カレントディレクトリから問題番号等を推測するので注意。
+
+## 環境設定
+
+* `.devcontainer` に VS Code Remote Development の設定ファイルが含まれる。
+* `.devcontainer/Dockerfile` で仮想環境が定義されている。
+    * npm や apk add したい場合はここに追加。
+* `.devcontainer/devcontainer.json` で 起動設定が行わている。
+    * Container 側の VSCode の設定を変えたい場合はここに追加/修正。
+* `requirements.txt` で pip のパッケージが定義されている。
+    * Container 作成時に pip install される。
