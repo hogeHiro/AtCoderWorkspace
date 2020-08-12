@@ -5,35 +5,42 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
-		"args": { "VARIANT": "3.8.5-alpine3.12" }
+		"args": {
+			"VARIANT": "3.8.5-alpine3.12"
+		}
 	},
-
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
+	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash",
 		"python.pythonPath": "/usr/local/bin/python",
 		"python.linting.enabled": true,
-		"python.linting.pylintEnabled": true,
-		"python.linting.flake8Path": "/usr/local/bin/flake8",
-		"python.linting.pylintPath": "/usr/local/bin/pylint"
+		"python.linting.lintOnSave": true,
+		"python.linting.pylintEnabled": false,
+		"python.linting.flake8Enabled": true,
+		"python.formatting.provider": "black",
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": false,
+		// "python.linting.flake8Path": "/usr/local/bin/flake8",
+		// "python.linting.pylintPath": "/usr/local/bin/pylint",
 		// "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
 		// "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
 		// "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
 		// "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
 		// "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+		"python.linting.flake8Args": [
+			"--max-line-length",
+			"140",
+			"--ignore=E203,W503,W504"
+		],
 	},
-
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"ms-python.python"
 	],
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [9000],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "pip3 install -r requirements.txt",
-
 	// Comment out to connect as root instead.
 	// "remoteUser": "vscode"
 }

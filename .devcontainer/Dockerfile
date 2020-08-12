@@ -4,5 +4,6 @@ FROM python:${VARIANT}
 RUN apk update && \
     apk upgrade && \
     apk add --no-cache \
+    alpine-sdk \
     bash \
     git \
