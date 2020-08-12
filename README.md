@@ -3,6 +3,11 @@
 AtCoder の作業環境。  
 Docker と VSCode (VS Code Remote Development導入済み) があればどこでも環境を再現できる(はず)。
 
+## 初回準備
+
+1. `.devcontainer/.env_` を開き、AtCoder のユーザー名とパスワードを記入する。
+1. `.devcontainer/.env` にリネームする。
+
 ## 使い方
 
 1. フォルダごと VSCode で開く
