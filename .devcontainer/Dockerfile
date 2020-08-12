@@ -10,6 +10,7 @@ RUN apk update && \
     bash \
     git \
     nodejs \
-    nodejs-npm
+    nodejs-npm \
+    expect
 
 RUN npm install -g atcoder-cli

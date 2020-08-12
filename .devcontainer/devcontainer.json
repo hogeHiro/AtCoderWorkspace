@@ -9,6 +9,14 @@
 			"VARIANT": "3.8.5-alpine3.12"
 		}
 	},
+	"runArgs": [
+		"--env-file",
+		"./.devcontainer/.env"
+	],
+	"remoteEnv": {
+		"AT_CODER_USER": "${containerEnv:AT_CODER_USER}",
+		"AT_CODER_PASS": "${containerEnv:AT_CODER_PASS}"
+	},
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash",
@@ -40,7 +48,7 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [9000],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip3 install -r requirements.txt",
+	"postCreateCommand": "pip3 install -r requirements.txt && sh .devcontainer/login.sh ${AT_CODER_USER} ${AT_CODER_PASS}",
 	// Comment out to connect as root instead.
 	// "remoteUser": "vscode"
 }
