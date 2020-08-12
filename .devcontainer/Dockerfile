@@ -5,5 +5,11 @@ RUN apk update && \
     apk upgrade && \
     apk add --no-cache \
     alpine-sdk \
+    libxml2-dev \
+    libxslt-dev \
     bash \
     git \
+    nodejs \
+    nodejs-npm
+
+RUN npm install -g atcoder-cli
