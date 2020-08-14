@@ -17,9 +17,13 @@ Docker と VSCode (VS Code Remote Development導入済み) があればどこで
 1. `acc new --template python <contestID>` でコンテンスト用のディレクトリを作成する。
 1. `cd <contestID>/<ID>`
 1. main.py ファイルを開き問題を解く。
-1. テストを実施する。`oj t -c " python3 ./main.py"`
-1. コードを提出する。`acc submit main.py`
+1. テストを実施する。`oj t -c " python ./main.py"`
+    * もしくは VSCode のタスク「atcoder_test_python」を実行しても同じ。
+1. コードを提出する。`acc submit`
     * カレントディレクトリから問題番号等を推測するので注意。
+    * もしくは VSCode のタスク「atcoder_submit_python」を実行しても同じ。
+    * 実行時、ブラウザが見つからないというエラーの表示があるが、提出そのものは問題ない。
+
 
 ## 環境設定
 
