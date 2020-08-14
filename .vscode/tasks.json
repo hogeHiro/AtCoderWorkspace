@@ -4,6 +4,15 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "atcoder_create_python",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "type": "shell",
+            "command": "${workspaceFolder}/.vscode/oj_create.sh",
+        },
+        {
             "label": "atcoder_test_python",
             "group": {
                 "kind": "build",

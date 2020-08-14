@@ -18,17 +18,16 @@ expect \"username:\"
 send \"${USER}\n\"
 expect \"password:*\"
 send \"${PASS}\n\"
-expect \"OK\"
-exit 0
+interact
 "
 
-echo "🚀🚀🚀Login ACC"
+echo "🚀🚀🚀Login OJ"
 expect -c "
+set timeout 10
 spawn oj login https://beta.atcoder.jp/
 expect \"Username:\" 
 send \"${USER}\n\"
 expect \"Password:\"
 send \"${PASS}\n\"
-expect \"*Welcome*\"
-exit 0
+interact
 "

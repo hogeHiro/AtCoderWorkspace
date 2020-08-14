@@ -15,6 +15,7 @@ Docker と VSCode (VS Code Remote Development導入済み) があればどこで
     * 開かれていなかった場合は、クリックして表示されるメニューから「Remote-Containers: Reopen in Container」を選ぶ。
 1. `cd workspace`
 1. `acc new --template python <contestID>` でコンテンスト用のディレクトリを作成する。
+    * もしくは VSCode のタスク「atcoder_create_python」を実行しても同じ。
 1. `cd <contestID>/<ID>`
 1. main.py ファイルを開き問題を解く。
 1. テストを実施する。`oj t -c " python ./main.py"`
