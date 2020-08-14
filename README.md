@@ -20,6 +20,8 @@ Docker と VSCode (VS Code Remote Development導入済み) があればどこで
 1. main.py ファイルを開き問題を解く。
 1. テストを実施する。`oj t -c " python ./main.py"`
     * もしくは VSCode のタスク「atcoder_test_python」を実行しても同じ。
+1. デバッグ実行したい場合は、VSCode の実行から「atcoder Debugger」を選択して実行する。
+    * その時の標準入力は input.txt の内容が利用される。
 1. コードを提出する。`acc submit`
     * カレントディレクトリから問題番号等を推測するので注意。
     * もしくは VSCode のタスク「atcoder_submit_python」を実行しても同じ。
