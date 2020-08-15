@@ -1,7 +1,8 @@
 {
     "task": {
         "program": [
-            "main.py"
+            "main.py",
+            "input.txt"
         ],
         "submit": "main.py"
     }

@@ -18,4 +18,5 @@ RUN acc config default-task-choice all && \
     acc config default-test-dirname-format test
 
 COPY .devcontainer/template/main.py /root/.config/atcoder-cli-nodejs/python/main.py
+COPY .devcontainer/template/input.txt /root/.config/atcoder-cli-nodejs/python/input.txt
 COPY .devcontainer/template/template.json /root/.config/atcoder-cli-nodejs/python/template.json
